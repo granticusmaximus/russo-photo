@@ -62,7 +62,7 @@ const NavigationNonAuth = (props) => {
   const toggle = () => setIsOpen(!isOpen);
   return (
   <Navbar color="light" light expand="md">
-    <NavbarBrand href="/">React & Firebase</NavbarBrand>
+    <NavbarBrand href="/">Falling in Love Photography</NavbarBrand>
     <NavbarToggler onClick={toggle} />
     <Collapse isOpen={isOpen} navbar>
       <Nav className="mr-auto" navbar>
