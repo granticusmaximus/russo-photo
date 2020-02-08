@@ -8,7 +8,11 @@ import {
   Nav,
   NavItem,
   NavLink,
-  NavbarText
+  NavbarText,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
 } from 'reactstrap';
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
@@ -33,7 +37,7 @@ const NavigationAuth = (props) => {
 
   return (
     <div>
-      <Navbar color="dark" light expand="md">
+      <Navbar color="light" light expand="md">
         <NavbarBrand href={ROUTES.HOME}>Falling in Love</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -42,11 +46,28 @@ const NavigationAuth = (props) => {
               <NavLink><Link to={ROUTES.HOME}>Home</Link></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink><Link to={ROUTES.ACCOUNT}>Account</Link></NavLink>
+              <NavLink><Link to={ROUTES.ABOUT}>About</Link></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink><Link to={ROUTES.ADMIN}>Admin</Link></NavLink>
+              <NavLink><Link to={ROUTES.PORTFOLIO}>Portfolio</Link></NavLink>
             </NavItem>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Account Info
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>
+                  <NavItem>
+                    <NavLink><Link to={ROUTES.ADMIN}>Admin</Link></NavLink>
+                  </NavItem>
+                </DropdownItem>
+                <DropdownItem>
+                  <NavItem>
+                    <NavLink><Link to={ROUTES.ACCOUNT}>Account</Link></NavLink>
+                  </NavItem>
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
           </Nav>
           <NavbarText><SignOutButton /></NavbarText>
         </Collapse>
@@ -61,20 +82,23 @@ const NavigationNonAuth = (props) => {
 
   const toggle = () => setIsOpen(!isOpen);
   return (
-  <Navbar color="light" light expand="md">
-    <NavbarBrand href="/">Falling in Love Photography</NavbarBrand>
-    <NavbarToggler onClick={toggle} />
-    <Collapse isOpen={isOpen} navbar>
-      <Nav className="mr-auto" navbar>
-        <NavItem>
-          <NavLink><Link to={ROUTES.LANDING}>Landing</Link></NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink><Link to={ROUTES.SIGN_IN}>Sign In</Link></NavLink>
-        </NavItem>
-      </Nav>
-    </Collapse>
-  </Navbar>
+    <Navbar color="light" light expand="md">
+      <NavbarBrand href={ROUTES.HOME}>Falling in Love</NavbarBrand>
+      <NavbarToggler onClick={toggle} />
+      <Collapse isOpen={isOpen} navbar>
+        <Nav className="mr-auto" navbar>
+          <NavItem>
+            <NavLink><Link to={ROUTES.HOME}>Home</Link></NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink><Link to={ROUTES.ABOUT}>About</Link></NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink><Link to={ROUTES.PORTFOLIO}>Portfolio</Link></NavLink>
+          </NavItem>
+        </Nav>
+      </Collapse>
+    </Navbar>
   );
 }
 

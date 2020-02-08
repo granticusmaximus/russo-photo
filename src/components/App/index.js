@@ -8,32 +8,37 @@ import PasswordForgetPage from '../PasswordForget';
 import HomePage from '../Home';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
-
+import AboutPage from '../About/About'
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
+import PortfolioPage from '../Portfolio/Portfolio';
+import Footer from '../Footer/Footer';
 
 const App = () => (
-  <div className="container">
+  <>
     <Router>
-      <div>
-        <Navigation />
-
-        <hr />
-
-        <Route exact path={ROUTES.LANDING} component={LandingPage} />
-        <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
-        <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
-        <Route
-          exact
-          path={ROUTES.PASSWORD_FORGET}
-          component={PasswordForgetPage}
-        />
-        <Route exact path={ROUTES.HOME} component={HomePage} />
-        <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
-        <Route exact path={ROUTES.ADMIN} component={AdminPage} />
+      <Navigation />
+      <div className="container">
+        <div>
+          <hr />
+          <Route exact path={ROUTES.LANDING} component={LandingPage} />
+          <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
+          <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
+          <Route
+            exact
+            path={ROUTES.PASSWORD_FORGET}
+            component={PasswordForgetPage}
+          />
+          <Route exact path={ROUTES.HOME} component={HomePage} />
+          <Route exact path={ROUTES.ABOUT} component={AboutPage} />
+          <Route exact path={ROUTES.PORTFOLIO} component={PortfolioPage} />
+          <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
+          <Route exact path={ROUTES.ADMIN} component={AdminPage} />
+        </div>
       </div>
     </Router>
-  </div>
+    <Footer />
+  </>
 );
 
 export default withAuthentication(App);
