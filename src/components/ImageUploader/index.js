@@ -5,15 +5,16 @@ import FileUploader from "react-firebase-file-uploader";
 import * as ROUTES from '../../constants/routes'
 import { Link } from 'react-router-dom'
 import { AuthUserContext } from '../Session';
+import error from '../../assets/img/lockchain.png'
 
 const ImagePage = () => (
-  <div>
-    <AuthUserContext.Consumer>
-      {authUser =>
-        authUser ? <ImageUpload /> : <ImageUploadNonAuth />
-      }
-    </AuthUserContext.Consumer>
-  </div>
+    <div>
+        <AuthUserContext.Consumer>
+            {authUser =>
+                authUser ? <ImageUpload /> : <ImageUploadNonAuth />
+            }
+        </AuthUserContext.Consumer>
+    </div>
 
 );
 
@@ -21,7 +22,9 @@ class ImageUploadNonAuth extends Component {
     render() {
         return (
             <div>
-                <h1>Nothing to see here</h1>
+                <center><h1>Ooooops</h1></center>
+                <center><img src={error} alt={"No Access"} height="50%" width="50%" /> </center>
+                <center><p>Its seems you are trying to access something you are not suppose to</p></center>
             </div>
         );
     }
@@ -58,7 +61,7 @@ class ImageUpload extends Component {
         return (
             <div>
                 <Button outline color="primary"><Link to={ROUTES.ADMIN}>Go Back to Admin Page</Link></Button>
-                <hr/>
+                <hr />
                 <Form>
                     <div className="row">
                         <div className="col-sm-4">
@@ -71,24 +74,24 @@ class ImageUpload extends Component {
                                 placeholder="Think of an awesome title"
                             />
                         </div>
-                        </div>
-                        <div className="row">
-                        <div className="col-sm-4">
-                        <Label>Image:</Label>
-                        <br/>
-                        {this.state.isUploading && <p>Progress: {this.state.progress}</p>}
-                        {this.state.avatarURL && <img src={this.state.avatarURL} alt="" />}
-                        <FileUploader
-                            accept="image/*"
-                            name="avatar"
-                            randomizeFilename
-                            storageRef={firebase.storage().ref("images")}
-                            onUploadStart={this.handleUploadStart}
-                            onUploadError={this.handleUploadError}
-                            onUploadSuccess={this.handleUploadSuccess}
-                            onProgress={this.handleProgress}
-                        />
                     </div>
+                    <div className="row">
+                        <div className="col-sm-4">
+                            <Label>Image:</Label>
+                            <br />
+                            {this.state.isUploading && <p>Progress: {this.state.progress}</p>}
+                            {this.state.avatarURL && <img src={this.state.avatarURL} alt="" />}
+                            <FileUploader
+                                accept="image/*"
+                                name="avatar"
+                                randomizeFilename
+                                storageRef={firebase.storage().ref("images")}
+                                onUploadStart={this.handleUploadStart}
+                                onUploadError={this.handleUploadError}
+                                onUploadSuccess={this.handleUploadSuccess}
+                                onProgress={this.handleProgress}
+                            />
+                        </div>
                     </div>
                 </Form>
             </div>

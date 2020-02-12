@@ -38,7 +38,7 @@ const NavigationAuth = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href={ROUTES.LANDING}>Falling in Love</NavbarBrand>
+        <NavbarBrand href={ROUTES.LANDING}>Fall in Love</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -83,7 +83,7 @@ const NavigationNonAuth = (props) => {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <Navbar color="light" light expand="md">
-      <NavbarBrand href={ROUTES.HOME}>Falling in Love</NavbarBrand>
+      <NavbarBrand href={ROUTES.HOME}>Fall in Love</NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="mr-auto" navbar>

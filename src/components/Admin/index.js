@@ -4,6 +4,7 @@ import {Button} from 'reactstrap'
 import * as ROUTES from '../../constants/routes'
 import { Link } from 'react-router-dom'
 import { AuthUserContext } from '../Session';
+import error from '../../assets/img/lockchain.png'
 
 const AdminPage = () => (
   <div>
@@ -17,7 +18,11 @@ const AdminPage = () => (
 );
 
 const AdminNonAuth = () => (
-  <h2>Nothing to see here</h2>
+  <>
+  <center><h1>Ooooops</h1></center>
+  <center><img src={error} alt={"No Access"} height="50%" width="50%" /> </center>
+  <center><p>Its seems you are trying to access something you are not suppose to</p></center>
+  </>
 )
 
 const AdminAuth = () => (
