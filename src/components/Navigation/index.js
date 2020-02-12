@@ -45,9 +45,7 @@ const NavigationAuth = (props) => {
             <NavItem>
               <NavLink><Link to={ROUTES.LANDING}>Home</Link></NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink><Link to={ROUTES.ABOUT}>Snapshots of Us</Link></NavLink>
-            </NavItem>
+            
             <NavItem>
               <NavLink><Link to={ROUTES.PORTFOLIO}>Portfolio</Link></NavLink>
             </NavItem>
@@ -89,9 +87,6 @@ const NavigationNonAuth = (props) => {
         <Nav className="mr-auto" navbar>
           <NavItem>
             <NavLink><Link to={ROUTES.LANDING}>Home</Link></NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink><Link to={ROUTES.ABOUT}>About</Link></NavLink>
           </NavItem>
           <NavItem>
             <NavLink><Link to={ROUTES.PORTFOLIO}>Portfolio</Link></NavLink>

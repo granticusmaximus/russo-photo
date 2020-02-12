@@ -28,11 +28,12 @@
 
 .container-body {
   width: 100%;
-    height: auto;
-    padding: 50px;
-    border-radius: 5px;
-    background-color: black;
-    opacity: 65% !important;
+  height: auto;
+  padding: 50px;
+  border-radius: 5px;
+  background-color: black;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    
 }
 
 
