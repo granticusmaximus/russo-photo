@@ -3,8 +3,24 @@ import React from 'react'
 import {Button} from 'reactstrap'
 import * as ROUTES from '../../constants/routes'
 import { Link } from 'react-router-dom'
+import { AuthUserContext } from '../Session';
 
-const Admin = () => (
+const AdminPage = () => (
+  <div>
+    <AuthUserContext.Consumer>
+      {authUser =>
+        authUser ? <AdminAuth /> : <AdminNonAuth />
+      }
+    </AuthUserContext.Consumer>
+  </div>
+
+);
+
+const AdminNonAuth = () => (
+  <h2>Nothing to see here</h2>
+)
+
+const AdminAuth = () => (
   <div>
     <h1>Admin</h1>
     <hr />
@@ -25,4 +41,4 @@ const Admin = () => (
   </div>
 );
 
-export default Admin;
+export default AdminPage;
