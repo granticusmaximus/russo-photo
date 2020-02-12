@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutPage = () => (
   <div className="container">
-    <h3 className="header">Picture it...</h3>
+    <center><h3 className="header">Picture it...</h3></center>
     <p>
       Long ago, before we even met, for lack of a more creative explanation; we actually DID "Fall in Love" with photography. 
     </p>
