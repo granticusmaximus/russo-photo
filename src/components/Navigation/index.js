@@ -38,15 +38,15 @@ const NavigationAuth = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href={ROUTES.HOME}>Falling in Love</NavbarBrand>
+        <NavbarBrand href={ROUTES.LANDING}>Falling in Love</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink><Link to={ROUTES.HOME}>Home</Link></NavLink>
+              <NavLink><Link to={ROUTES.LANDING}>Home</Link></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink><Link to={ROUTES.ABOUT}>About</Link></NavLink>
+              <NavLink><Link to={ROUTES.ABOUT}>Snapshots of Us</Link></NavLink>
             </NavItem>
             <NavItem>
               <NavLink><Link to={ROUTES.PORTFOLIO}>Portfolio</Link></NavLink>

@@ -13,6 +13,7 @@ import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
 import PortfolioPage from '../Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
+import ImagePage from '../ImageUploader';
 
 const App = () => (
   <>
@@ -34,6 +35,7 @@ const App = () => (
           <Route exact path={ROUTES.PORTFOLIO} component={PortfolioPage} />
           <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
           <Route exact path={ROUTES.ADMIN} component={AdminPage} />
+          <Route exact path={ROUTES.IMAGE_UPLOAD} component={ImagePage} />
         </div>
       </div>
     </Router>
