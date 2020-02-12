@@ -17,6 +17,7 @@
   background-color: #04c2c9;
   border-bottom:3px solid black;
   color: black;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
 }
 
 .container {
