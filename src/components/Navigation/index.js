@@ -45,9 +45,11 @@ const NavigationAuth = (props) => {
             <NavItem>
               <NavLink><Link to={ROUTES.LANDING}>Home</Link></NavLink>
             </NavItem>
-            
             <NavItem>
               <NavLink><Link to={ROUTES.PORTFOLIO}>Portfolio</Link></NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink><Link to={ROUTES.CONTACT}>Contact</Link></NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -90,6 +92,9 @@ const NavigationNonAuth = (props) => {
           </NavItem>
           <NavItem>
             <NavLink><Link to={ROUTES.PORTFOLIO}>Portfolio</Link></NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink><Link to={ROUTES.CONTACT}>Contact</Link></NavLink>
           </NavItem>
         </Nav>
       </Collapse>

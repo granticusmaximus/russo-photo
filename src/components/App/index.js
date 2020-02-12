@@ -8,12 +8,12 @@ import PasswordForgetPage from '../PasswordForget';
 import HomePage from '../Home';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
-import AboutPage from '../About/About'
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
 import PortfolioPage from '../Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
 import ImagePage from '../ImageUploader';
+import Contact from '../Contact';
 
 const App = () => (
   <>
@@ -30,11 +30,11 @@ const App = () => (
             component={PasswordForgetPage}
           />
           <Route exact path={ROUTES.HOME} component={HomePage} />
-          <Route exact path={ROUTES.ABOUT} component={AboutPage} />
           <Route exact path={ROUTES.PORTFOLIO} component={PortfolioPage} />
           <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
           <Route exact path={ROUTES.ADMIN} component={AdminPage} />
           <Route exact path={ROUTES.IMAGE_UPLOAD} component={ImagePage} />
+          <Route exact path={ROUTES.CONTACT} component={Contact} />
         </div>
       </div>
     </Router>

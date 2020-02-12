@@ -42,6 +42,11 @@ const AdminAuth = () => (
           <h2>Box 2 for Session Events</h2>
         </div>
       </div>
+      <div className="col-md">
+        <div className="card">
+          <h2>Box 3 for Setting Up Blog</h2>
+        </div>
+      </div>
     </div>
   </div>
 );
