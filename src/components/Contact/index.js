@@ -12,22 +12,22 @@ class Contact extends Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        const { name, email, subject, message } = this.state
+        const { email, subject, message } = this.state
         let templateParams = {
-            from_name: name,
-            from_email: email,
-            to_name: 'gwatson117@gmail.com',
-            subject: subject,
-            message_html: message,
-        }
-        emailjs.send(
-            'gmail',
-            'template_NAnlqkjG',
-            templateParams,
-            'user_Pwpe3fIeHHOTJCdUhCkfQ'
-        )
-        this.resetForm()
-    }
+          from_name: email,
+          to_name: 'gwatson117@gmail.com',
+          subject: subject,
+          message_html: message,
+         }
+         emailjs.send(
+          'gwatson117_gmail_com',
+          'template_NAnlqkjG',
+           templateParams,
+          'user_Pwpe3fIeHHOTJCdUhCkfQ'
+         )
+         this.resetForm()
+     }
+
     resetForm() {
         this.setState({
             name: '',
