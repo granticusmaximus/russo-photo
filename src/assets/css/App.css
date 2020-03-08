@@ -20,6 +20,29 @@
   box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
 }
 
+.bg-light {
+  background-color: #13293D !important;
+  border-bottom: solid 3px #04c2c9;
+}
+
+.navbar-light .navbar-brand {
+  color: #04c2c9;
+}
+
+
+.navbar-light a {
+  color: #04c2c9;
+}
+.navbar-light a:hover {
+  color: black;
+  background-color: #04c2c9;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: black;
+  background-color: #04c2c9;
+}
+
 .container {
   width: 100%;
   min-height: 650px;
