@@ -51,6 +51,9 @@ const NavigationAuth = (props) => {
             <NavItem>
               <NavLink><Link to={ROUTES.CONTACT}>Contact</Link></NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink><Link to={ROUTES.BOOKING}>Book a Session</Link></NavLink>
+            </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Account Info
@@ -92,6 +95,9 @@ const NavigationNonAuth = (props) => {
           </NavItem>
           <NavItem>
             <NavLink><Link to={ROUTES.PORTFOLIO}>Portfolio</Link></NavLink>
+          </NavItem>
+          <NavItem>
+              <NavLink><Link to={ROUTES.BOOKING}>Book a Session</Link></NavLink>
           </NavItem>
           <NavItem>
             <NavLink><Link to={ROUTES.CONTACT}>Contact</Link></NavLink>

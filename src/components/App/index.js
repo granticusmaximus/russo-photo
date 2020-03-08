@@ -14,6 +14,7 @@ import PortfolioPage from '../Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
 import ImagePage from '../ImageUploader';
 import Contact from '../Contact';
+import Booking from '../Booking';
 
 const App = () => (
   <>
@@ -35,6 +36,7 @@ const App = () => (
           <Route exact path={ROUTES.ADMIN} component={AdminPage} />
           <Route exact path={ROUTES.IMAGE_UPLOAD} component={ImagePage} />
           <Route exact path={ROUTES.CONTACT} component={Contact} />
+          <Route exact path={ROUTES.BOOKING} component={Booking} />
         </div>
       </div>
     </Router>

@@ -8,3 +8,4 @@ export const CONTACT = '/contact';
 export const PORTFOLIO = '/portfolio';
 export const IMAGE_UPLOAD = '/upload-image';
 export const PASSWORD_FORGET = '/pw-forget';
+export const BOOKING = '/sessiong-booking';
